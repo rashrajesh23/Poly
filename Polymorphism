@@ -1,0 +1,69 @@
+Polymorphism in java
+
+In general, “poly” means “many” and “morph” means “ shapes” . In OOPs concept the processs of some code,data,method or object behaves differently under different circumstances
+
+There are two types of Polymorphism
+
+
+Compile-time polymorphism
+
+It’s also known as Static polymorphism. This polymorphism happens at the complie time, which means compiler decides which method is involve
+compile-time polymorphism is achieved by method overloading
+Example program for Compile-time polymorphism
+
+public class Demo
+{ 
+ public static void main(String[] args)
+{
+ Demo d1 = new Demo();
+ 
+ System.out.println("add of two no. "+ d1.arithmetic(10,20));
+ System.out.println("sub of three no. "+d1.arithmetic(45,20,10)); 
+ 
+}    // method overloading with different  no.of arguments or parameter
+ public int arithmetic(int a , int b)
+ {
+  return a+b;
+ }
+ public int arithmetic(int a ,int b, int c)
+ {
+  return a-b-c;
+ }
+} 
+
+output
+
+
+Run – time polymorphism
+
+it’s also known as Dynamic polymorphism . This polymorphism happens at the run time,which means it can’t be decided by the compiler
+run-time polymorphism is achieved by method overriding
+Example program for run-time polymorphism
+
+To achieve a method overriding we have to use inheritance concept
+
+Program 1
+
+public class Parent 
+{
+public void welcome()
+{
+System.out.println("hello");
+}
+
+}
+program 2
+
+public class Youngster extends Parent
+{
+public static void main(String[] args)
+{
+Youngster y1 = new Youngster();
+y1.welcome();
+}
+public void welcome()
+{
+System.out.println("i won't welcome you");
+}
+}
+
